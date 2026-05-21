@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #050510;
+    --neon-pink: #ff00ff;
+    --neon-cyan: #00ffff;
+    --neon-green: #39ff14;
+    --silver: #c0c0c0;
+    --window-bg: rgba(192, 192, 192, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'VT323', monospace;
+    overflow-x: hidden;
+    position: relative;
+    cursor: crosshair;
+}
+
+/* Background Effects */
+.grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        linear-gradient(transparent 95%, var(--neon-pink) 100%),
+        linear-gradient(90deg, transparent 95%, var(--neon-pink) 100%);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-200px);
+    animation: grid-move 5s linear infinite;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 50px; }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    z-index: -2;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.marquee-top {
+    background: var(--neon-pink);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 10px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px black;
+}
+
+.glitch {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    text-shadow: 0.05em 0 0 var(--neon-pink), -0.05em -0.05em 0 var(--neon-cyan);
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 var(--neon-pink), -0.05em -0.05em 0 var(--neon-cyan); }
+    100% { text-shadow: -0.05em -0.05em 0 var(--neon-pink), 0.05em 0.05em 0 var(--neon-cyan); }
+}
+
+.subtitle {
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Window Component */
+.window {
+    background: var(--silver);
+    border: 3px solid white;
+    border-right-color: #888;
+    border-bottom-color: #888;
+    color: black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.window-header {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.btn {
+    background: var(--silver);
+    color: black;
+    border: 2px solid white;
+    border-right-color: #888;
+    border-bottom-color: #888;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    border: 2px inset #888;
+}
+
+.window-content {
+    padding: 20px;
+    font-size: 1.2rem;
+    background: #fff;
+    border: 2px inset #ddd;
+    margin: 5px;
+}
+
+.window-content h2 {
+    color: var(--neon-pink);
+    margin-bottom: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.window-content ul {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.window-content li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.y2k-img {
+    max-width: 100%;
+    border: 3px solid var(--neon-cyan);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.cyber-button {
+    background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan));
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 15px 20px;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    transition: all 0.3s;
+}
+
+.cyber-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon-pink);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 2px dashed var(--neon-green);
+}
+
+.hit-counter {
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+}
+
+.hit-counter span {
+    background: black;
+    color: var(--neon-green);
+    padding: 5px 10px;
+    border: 2px solid var(--silver);
+    letter-spacing: 5px;
+}
