@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2K 賽博空間</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="grid"></div>
+    
+    <header class="header">
+        <marquee scrollamount="10" class="marquee-top">✨ 歡迎來到公元 2000 年 ✨ 千禧蟲危機已解除 ✨ 準備好進入新世紀了嗎？ ✨</marquee>
+        <h1 class="glitch" data-text="CYBERSPACE 2000">CYBERSPACE 2000</h1>
+        <p class="subtitle">歡迎來到未來的網路世界</p>
+    </header>
+
+    <main class="container">
+        <section class="window">
+            <div class="window-header">
+                <span>C:\Y2K\ABOUT.EXE</span>
+                <div class="window-controls">
+                    <span class="btn">_</span>
+                    <span class="btn">□</span>
+                    <span class="btn">x</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>個人資料</h2>
+                <ul>
+                    <li>👾 學號: 411424253</li>
+                    <li>💿 姓名: 杜冠璁</li>
+                    <li>🌐 興趣: 打球</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="window neon-border">
+            <div class="window-header">
+                <span>C:\Y2K\MEDIA.EXE</span>
+                <div class="window-controls">
+                    <span class="btn">_</span>
+                    <span class="btn">□</span>
+                    <span class="btn">x</span>
+                </div>
+            </div>
+            <div class="window-content text-center">
+                <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Y2K Aesthetic" class="y2k-img">
+                <br>
+                <button class="cyber-button">下載 Winamp 外掛</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 1999-2000 Cyberspace Network. All rights reserved.</p>
+        <div class="hit-counter">
+            VISITORS: <span>001337</span>
+        </div>
+    </footer>
+</body>
+</html>
